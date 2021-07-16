@@ -1,0 +1,147 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar-brand img {
+    max-height: 42px;
+}
+
+.nav-link span {
+    font-weight: 700;
+    color: #272042;
+}
+
+.btn-masuk {
+    font-weight: bold;
+    border-radius: 0;
+    border-width: 2px;
+    border-color: #343F56;
+    width: 140px;
+    height: 40px;
+}
+
+.btn-masuk:hover {
+    background-color: #343F56;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-daftar {
+    color: #343F56;
+    background-color: #8B8BA5;
+    font-weight: 500;
+    border-radius: 0;
+    width: 140px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.btn-daftar:hover {
+    color: beige;
+    font-weight: bold;
+    border-radius: 2px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.info {
+    font-weight: bolder;
+    color: #272042;
+}
+
+.row {
+    margin-top: 120px;
+}
+
+.lead {
+    color: #8B8BA5;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.btn-laporkan {
+    color: #fff;
+    background-color: #272042;
+    font-weight: bold;
+}
+
+.btn-laporkan:hover {
+    color: white;
+    background-color: #343F56;
+    text-decoration: none;
+}
+
+
+/* animasi back to top */
+
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #272042;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 20%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#back-to-top-btn i {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* Animations */
+
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+
+/* fadeInUp */
+
+@keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+
+
+/* fadeOutDown */
+
+@keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+
+/* back to top finish */
