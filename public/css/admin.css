@@ -23,7 +23,18 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
+.unggu {
+  background: #272042;
+  color: #fff;
+  text-align: center;
+}
+.unggu:hover{
+background: #6555a5;
+}
+.card-body {
+  color: #272042;
+  text-align: center;
+}
 .navbar {
   padding: 15px 10px;
   background: #fff;

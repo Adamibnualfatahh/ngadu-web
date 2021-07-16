@@ -2,7 +2,12 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\LaporanController;
+use App\Http\Controllers\Admin\PengaduanController;
+use App\Http\Controllers\Admin\PetugasController;
+use App\Http\Controllers\Admin\SiswaController;
 use App\Http\Controllers\User\UserController;
+use App\Models\Pengaduan;
 use Illuminate\Support\Facades\Route;
 
 
@@ -37,6 +42,11 @@ Route::prefix('admin')->group(function(){
     Route::get('/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    Route::resource('pengaduan', PengaduanController::class);
+    Route::resource('petugas', PetugasController::class);
+    Route::resource('siswa', SiswaController::class);
+    Route::get('laporan', [LaporanController::class, 'index'])->name('laporan.index');
 
 });
 

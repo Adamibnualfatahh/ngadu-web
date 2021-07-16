@@ -28,14 +28,14 @@ class UserController extends Controller
         $password = Hash::check($request->password, $username->password);
 
         if (!$password) {
-            return redirect()->back()->with(['pesan' => 'Password tidak sesuai!']);
+            return redirect()->back()->with(['pesan' => 'Password tidak sesuai']);
         }
 
         if (Auth::guard('siswa')->attempt(['username' => $request->username, 'password' => $request->password])) {
-             return redirect()->back();
-         } else {
-             return redirect()->back()->with(['pesan' => 'Akun tidak terdaftar!']);
-         }
+            return redirect()->back();
+        } else {
+            return redirect()->back()->with(['pesan' => 'Akun tidak terdaftar!']);
+        }
     }
 
     public function formRegister()
@@ -65,7 +65,7 @@ class UserController extends Controller
             return redirect()->back()->with(['pesan' => 'Username sudah terdaftar']);
         }
 
-        siswa::create([
+        Siswa::create([
             'nis' => $data['nis'],
             'nama' => $data['nama'],
             'username' => $data['username'],
