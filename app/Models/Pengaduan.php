@@ -12,14 +12,14 @@ class Pengaduan extends Model
     protected $table = 'pengaduan';
     protected $primaryKey = 'id_pengaduan';
     protected $fillable = [
-        'tgl_pengaduan',
+        'tgl_penggaduan',
         'nis',
         'isi_laporan',
         'foto',
         'status',
     ];
 
-    protected $dates = ['tgl_pengaduan'];
+    protected $dates = ['tgl_penggaduan'];
 
     public function user(){
         return $this->hasOne(Siswa::class, 'nis', 'nis');

@@ -135,7 +135,7 @@
                         @endif
                     </div>
                     <div>
-                        <p>{{ $v->tgl_pengaduan->format('d M, h:i') }}</p>
+                        <p>{{ $v->tgl_penggaduan->format('d M, h:i') }}</p>
                     </div>
                 </div>
             </div>

@@ -106,7 +106,7 @@ class UserController extends Controller
         date_default_timezone_set('Asia/Bangkok');
 
         $pengaduan = Pengaduan::create([
-            'tgl_pengaduan' => date('Y-m-d h:i:s'),
+            'tgl_penggaduan' => date('Y-m-d h:i:s'),
             'nis' => Auth::guard('siswa')->user()->nis,
             'isi_laporan' => $data['isi_laporan'],
             'foto' => $data['foto'] ?? '',
@@ -129,11 +129,11 @@ class UserController extends Controller
         $hitung = [$terverifikasi, $proses, $selesai];
 
         if ($siapa == 'me') {
-            $pengaduan = Pengaduan::where('nis', Auth::guard('siswa')->user()->nis)->orderBy('tgl_pengaduan', 'desc')->get();
+            $pengaduan = Pengaduan::where('nis', Auth::guard('siswa')->user()->nis)->orderBy('tgl_penggaduan', 'desc')->get();
 
             return view('user.laporan', ['pengaduan' => $pengaduan, 'hitung' => $hitung, 'siapa' => $siapa]);
         } else {
-            $pengaduan = Pengaduan::where([['nis', '!=', Auth::guard('siswa')->user()->nis], ['status', '!=', '0']])->orderBy('tgl_pengaduan', 'desc')->get();
+            $pengaduan = Pengaduan::where([['nis', '!=', Auth::guard('siswa')->user()->nis], ['status', '!=', '0']])->orderBy('tgl_penggaduan', 'desc')->get();
 
             return view('user.laporan', ['pengaduan' => $pengaduan, 'hitung' => $hitung, 'siapa' => $siapa]);
         }
