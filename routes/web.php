@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\LaporanController;
 use App\Http\Controllers\Admin\PengaduanController;
 use App\Http\Controllers\Admin\PetugasController;
 use App\Http\Controllers\Admin\SiswaController;
+use App\Http\Controllers\Admin\TanggapanController;
 use App\Http\Controllers\User\UserController;
 use App\Models\Pengaduan;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('siswa', SiswaController::class);
     Route::get('laporan', [LaporanController::class, 'index'])->name('laporan.index');
 
+    Route::post('tanggapan/createOrUpdate', [TanggapanController::class, 'createOrUpdate'])->name('tanggapan.createOrUpdate');
 });
 
 

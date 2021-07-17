@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Petugas;
 use Illuminate\Http\Request;
 
 class PetugasController extends Controller
 {
     public function index(){
         return view('Admin.Petugas.index');
-
+        $petugas = Petugas::all();
+        return view('Admin.Petugas.index', ['petugas' => $petugas]);
     }
 
     public function create(){
