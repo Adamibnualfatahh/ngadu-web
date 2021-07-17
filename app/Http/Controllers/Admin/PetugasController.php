@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class PetugasController extends Controller
 {
     public function index(){
-        return view('Admin.Petugas.index');
+
         $petugas = Petugas::all();
         return view('Admin.Petugas.index', ['petugas' => $petugas]);
     }
