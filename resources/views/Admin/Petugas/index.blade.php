@@ -2,12 +2,27 @@
 @section('css')
     
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+<style>
+    .btn-petugas{
+        background: #272042;
+        border: 1px solid #272042;
+        color: white;
+        width: 20%;
+    }
+    .btn-petugas:hover{
+        background: #6554aa;
+        border: 1px solid #6554aa;
+        color: white;
+        width: 20%;
+    }
+</style>
 
 @endsection
 
 @section('header', 'Data Petugas')
 
 @section('content')
+    <a href="{{ route('petugas.create') }}" class="btn btn-petugas mb-3">Tambah Petugas +</a>
     <table id="petugasTable">
         <thead>
             <tr>

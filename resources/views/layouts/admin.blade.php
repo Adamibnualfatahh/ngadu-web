@@ -12,6 +12,18 @@
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
      @yield('css')   
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <style>
+        .btn-purple{
+            background: #272042;
+            border: 1px solid #272042;
+            color: white;
+            width: 100%
+        }
+        .btn-danger{
+            border-radius: 0px;
+        }
+        
+    </style>
     
 </head>
 
@@ -41,6 +53,15 @@
                     <a href="{{ route('laporan.index') }}">Laporan</a>
                 </li>
             </ul>
+            <div>
+                
+            </div>
+            <a href="{{ route('pekat.index') }}">
+                <button type="button" class="btn btn-danger"  style="width: 100%; " >
+                    Logout
+                 </button>
+            </a>
+            
         </nav>
 
 
